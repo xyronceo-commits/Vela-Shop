@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VELA | Modern Fashion Store</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <span>Free shipping on orders over ₦25,000</span>
+      <span>|</span>
+      <span>Use code <strong>VELA10</strong> for 10% off your first order</span>
+      <button class="tb-close" id="tbClose">✕</button>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    <div class="logo">VELA</div>
+    <ul class="nav-links">
+      <li><a href="#new">New In</a></li>
+      <li><a href="#women">Women</a></li>
+      <li><a href="#men">Men</a></li>
+      <li><a href="#sale">Sale</a></li>
+    </ul>
+    <div class="nav-icons">
+      <button class="icon-btn" id="searchToggle">🔍</button>
+      <button class="icon-btn">♡</button>
+      <button class="icon-btn cart-btn" id="cartBtn">🛍️ <span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </nav>
+
+  <!-- SEARCH BAR -->
+  <div class="search-bar" id="searchBar">
+    <input type="text" placeholder="Search for products, brands..." id="searchInput"/>
+    <button id="searchClose">✕</button>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-main" style="background-image:url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=80')">
+        <div class="hero-main-overlay"></div>
+        <div class="hero-main-content">
+          <span class="hero-season">New Collection · SS25</span>
+          <h1>Dress for the<br/><em>Life You Want</em></h1>
+          <p>Effortless style for the modern woman and man. Curated pieces that speak without saying a word.</p>
+          <div class="hero-btns">
+            <a href="#new" class="btn-dark">Shop Women</a>
+            <a href="#men" class="btn-outline-dark">Shop Men</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-sub" style="background-image:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80')">
+          <div class="hs-content"><span>Accessories</span><h3>Complete the Look</h3><a href="#" class="link-arrow">Shop Now →</a></div>
+        </div>
+        <div class="hero-sub" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80')">
+          <div class="hs-content"><span>Sale — Up to 50% Off</span><h3>Clearance Picks</h3><a href="#sale" class="link-arrow">Shop Sale →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="cats-grid reveal">
+        <div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80')"><div class="cat-label"><h3>Dresses</h3><span>124 items</span></div></div>
+        <div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1562137369-1a1a0bc66744?w=500&q=80')"><div class="cat-label"><h3>Tops</h3><span>89 items</span></div></div>
+        <div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&q=80')"><div class="cat-label"><h3>Bottoms</h3><span>67 items</span></div></div>
+        <div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1584184924103-e310d9dc82fc?w=500&q=80')"><div class="cat-label"><h3>Shoes</h3><span>51 items</span></div></div>
+        <div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80')"><div class="cat-label"><h3>Bags</h3><span>38 items</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW IN -->
+  <section id="new" class="products-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div><span class="label">Just Arrived</span><h2>New <em>In</em></h2></div>
+        <div class="prod-filters">
+          <button class="pf active" data-f="all">All</button>
+          <button class="pf" data-f="women">Women</button>
+          <button class="pf" data-f="men">Men</button>
+          <button class="pf" data-f="accessories">Accessories</button>
+        </div>
+      </div>
+      <div class="products-grid reveal" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <div class="promo-banner reveal">
+    <div class="pb-img" style="background-image:url('https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=1400&q=80')"></div>
+    <div class="pb-overlay"></div>
+    <div class="pb-content">
+      <span class="label" style="color:#F9E4B7">Limited Time Offer</span>
+      <h2>Up to <em>50% Off</em><br/>Selected Styles</h2>
+      <p>Shop our end-of-season sale before it's gone. New items added daily.</p>
+      <a href="#sale" class="btn-gold-outline">Shop the Sale</a>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="features-section">
+    <div class="container feats-grid">
+      <div class="feat reveal"><div class="fi">🚚</div><h4>Free Shipping</h4><p>On orders above ₦25,000 nationwide</p></div>
+      <div class="feat reveal"><div class="fi">↩️</div><h4>Easy Returns</h4><p>30-day hassle-free return policy</p></div>
+      <div class="feat reveal"><div class="fi">🔒</div><h4>Secure Payment</h4><p>256-bit SSL encrypted checkout</p></div>
+      <div class="feat reveal"><div class="fi">💬</div><h4>24/7 Support</h4><p>Chat, email, or call us anytime</p></div>
+    </div>
+  </section>
+
+  <!-- TRENDING -->
+  <section id="sale" class="products-section alt-bg">
+    <div class="container">
+      <div class="section-header reveal">
+        <div><span class="label">Hot Right Now</span><h2>Trending <em>Picks</em></h2></div>
+        <a href="#" class="view-all-link">View All →</a>
+      </div>
+      <div class="products-grid reveal" id="trendingGrid"></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container nl-inner reveal">
+      <div class="nl-text"><h2>Get 10% Off<br/><em>Your First Order</em></h2><p>Join 120,000+ style lovers and get early access to new drops, exclusive deals, and fashion inspiration.</p></div>
+      <form class="nl-form" id="nlForm">
+        <input type="email" placeholder="Enter your email address" required/>
+        <button type="submit" class="btn-dark">Subscribe & Save</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo f-logo">VELA</div>
+        <p>Modern fashion for the bold and the beautiful. Curated style delivered to your door across Nigeria.</p>
+        <div class="socials"><a href="#">IG</a><a href="#">FB</a><a href="#">TK</a><a href="#">PI</a></div>
+        <div class="payment-icons">
+          <span>Visa</span><span>Mastercard</span><span>Paystack</span><span>Flutterwave</span>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="#">New In</a></li><li><a href="#">Women</a></li><li><a href="#">Men</a></li><li><a href="#">Accessories</a></li><li><a href="#">Sale</a></li></ul></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="#">Size Guide</a></li><li><a href="#">Shipping Info</a></li><li><a href="#">Returns</a></li><li><a href="#">Track Order</a></li><li><a href="#">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About VELA</a></li><li><a href="#">Sustainability</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom container"><p>© 2024 VELA Fashion Ltd. All rights reserved.</p><div><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cookies</a></div></div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cd-header"><h3>Your Bag (<span id="drawerCount">0</span>)</h3><button id="cartClose">✕</button></div>
+    <div class="cd-items" id="cdItems"></div>
+    <div class="cd-footer">
+      <div class="cd-total"><span>Total</span><strong id="cdTotal">₦0</strong></div>
+      <button class="btn-dark btn-full" id="checkoutBtn">Proceed to Checkout</button>
+      <p class="cd-note">Free shipping on this order 🎉</p>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
